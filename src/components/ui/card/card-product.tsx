@@ -21,7 +21,7 @@ export const CardProduct = ({ product, className }: CardProductProps) => {
       <div className="flex z-10 items-center gap-2 p-4">
         <div className="flex flex-col">
           <span className="text-lg font-bold text-blue-800 italic">Title here</span>
-          <span className="text-xs font-bold text-white">Lorem ipsum dolor sit, amet consectetur</span>
+          <span className="text-xs font-bold text-black">Lorem ipsum dolor sit, amet consectetur</span>
         </div>
         <span className="text-lg font-bold text-blue-800 bg-pink-200 px-3 py-2 rounded-full">$80</span>
       </div>
