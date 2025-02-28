@@ -18,7 +18,7 @@ export const SearchResultRouter = () => {
   return (
     <>
       <FilterBox selected={selected} setSelected={setSelected} />
-      <div className="grid gap-6 max-[420px]:grid-cols-1 max-[640px]:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="grid gap-6 w-full max-[421px]:grid-cols-1 max-[640px]:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {test.map((t, index) => (
           <CardProduct key={index} product={t} />
         ))}
