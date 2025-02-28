@@ -62,7 +62,7 @@ export const FilterBox = ({ selected, setSelected }: FilterBoxProps) => {
           />
 
           {/* Price filter */}
-          <div className="flex flex-wrap sm:flex-nowrap sm:items-center gap-2 flex-1 min-w-[270px]">
+          <div className="flex flex-wrap text-[14px] sm:flex-nowrap sm:items-center gap-2 flex-1 min-w-[270px]">
             <Input
               placeholder="Min price"
               containerClass="flex-1 min-w-[90px] h-[36.5px]"
