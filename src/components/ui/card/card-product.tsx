@@ -1,7 +1,7 @@
-import { Link } from "../link";
+// import { Link } from "../link";
 import { Button } from "../button";
 import { cva, VariantProps } from "class-variance-authority";
-import { ProductProps } from "src/types/product";
+// import { ProductProps } from "src/types/product";
 
 const cardVariants = cva("relative overflow-hidden bg-white w-[240px] h-[320px]  rounded-lg shadow  flex flex-col items-center");
 
@@ -10,7 +10,7 @@ const cardVariants = cva("relative overflow-hidden bg-white w-[240px] h-[320px] 
  * @typedef {Object} CardProductProps
  */
 export type CardProductProps = VariantProps<typeof cardVariants> & {
-  product?: string;
+  product?: number;
   className?: string;
 };
 
@@ -18,6 +18,7 @@ export type CardProductProps = VariantProps<typeof cardVariants> & {
  * CardProduct component.
  */
 export const CardProduct = ({ product, className }: CardProductProps) => {
+  console.log(product)
   return (
     <div className={cardVariants({ className })}>
         <div className="h-[70%] w-[150%] z-[0] rotate-[-20deg] bg-[#a8e6ff] absolute top-[-21%] left-[-29%]">

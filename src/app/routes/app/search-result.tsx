@@ -23,7 +23,7 @@ export const SearchResultRouter = () => {
        />
       <div className="flex items-center justify-center flex-wrap gap-[3%] gap-y-6">
         {test.map((t, index) => (
-            <CardProduct key={index}/>
+            <CardProduct key={index} product={t}/>
         ))}
       </div>
     </>
