@@ -12,7 +12,7 @@ export const FilterBox = ({ selected, setSelected }: FilterBoxProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="flex flex-col w-full rounded-[6px] bg-white px-4 sm:px-6">
+    <div className="flex flex-col w-full rounded-[6px] bg-white px-4 sm:px-6 z-[12]">
       {/* Header */}
       <div className="flex z-[11] justify-between items-center pt-[10px]">
         <SelectTransparent
