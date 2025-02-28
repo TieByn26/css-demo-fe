@@ -6,7 +6,7 @@ type SelectSearchProps = {
     placeholder: string;
     selected: string;
     setSelected: (value: string) => void;
-    className?: string; // Thêm className để tùy chỉnh giao diện
+    className?: string; 
 };
 
 export const SelectSearch = ({ options, placeholder, setSelected, className }: SelectSearchProps) => {
@@ -35,7 +35,6 @@ export const SelectSearch = ({ options, placeholder, setSelected, className }: S
 
     return (
         <div ref={selectRef} className={`relative w-64 flex-1 ${className || ""}`}>
-            {/* Input field (search and display) */}
             <div className={`border text-[14px] px-4 py-[7px] rounded bg-white relative transition-all border-gray-300 ${open ? 'border-blue-500' : ''}`}>
                 <input
                     type="text"
@@ -49,8 +48,6 @@ export const SelectSearch = ({ options, placeholder, setSelected, className }: S
                     {open ? <LocalIcon className="-rotate-90" iconName="arrow_icon" /> : <LocalIcon className="rotate-90" iconName="arrow_icon" />}
                 </div>
             </div>
-
-            {/* Option List */}
             {open && (
                 <div className="absolute z-[10] text-[14px] left-0 w-full mt-1 bg-white border rounded shadow-md max-h-40 overflow-auto">
                     {filteredOptions.length > 0 ? (

@@ -11,19 +11,22 @@ export const SearchResultRouter = () => {
   const query = searchParams.get("q") || "";
 
   useEffect(() => {
-      console.log(selected);
-      console.log(query);
+    console.log(selected);
+    console.log(query);
   }, [selected]);
 
   return (
     <>
-      <FilterBox 
+      <FilterBox
         selected={selected}
         setSelected={setSelected}
-       />
-      <div className="flex items-center justify-center flex-wrap gap-[3%] gap-y-6">
+      />
+      <div className="grid shadow max-[420px]:gap-y-7 max-[420px]:grid-cols-1 max-[640px]:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-2 sm:gap-10">
         {test.map((t, index) => (
-            <CardProduct key={index} product={t}/>
+          <CardProduct
+            key={index}
+            product={t}
+          />
         ))}
       </div>
     </>

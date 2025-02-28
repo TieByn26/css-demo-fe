@@ -6,7 +6,7 @@ type SelectProps = {
     placeholder: string;
     selected: string;
     setSelected: (value: string) => void;
-    className?: string; // Thêm className để tùy chỉnh
+    className?: string;
 };
 
 export const Select = ({ options, placeholder, setSelected, className }: SelectProps) => {

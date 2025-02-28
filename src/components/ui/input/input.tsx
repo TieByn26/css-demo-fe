@@ -1,7 +1,7 @@
 import { forwardRef, ReactNode } from "react";
 import { cva, VariantProps } from "class-variance-authority";
 
-const inputVariants = cva("focus:border-transparent focus:outline-none focus:ring-0");
+const inputVariants = cva("focus:border-transparent w-[80%] focus:outline-none focus:ring-0");
 
 /**
  * Input component props.

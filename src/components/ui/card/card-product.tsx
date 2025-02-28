@@ -1,55 +1,46 @@
-// import { Link } from "../link";
 import { Button } from "../button";
 import { cva, VariantProps } from "class-variance-authority";
-// import { ProductProps } from "src/types/product";
 
-const cardVariants = cva("relative overflow-hidden bg-white w-[240px] h-[320px]  rounded-lg shadow  flex flex-col items-center");
+const cardVariants = cva(
+  "relative overflow-hidden shadow flex flex-col justify-between items-center bg-white rounded-lg w-full h-[360px] max-[540px]:h-[320px] max-[420px]:h-[370px]"
+);
 
-/**
- * CardProduct component props.
- * @typedef {Object} CardProductProps
- */
 export type CardProductProps = VariantProps<typeof cardVariants> & {
   product?: number;
   className?: string;
 };
 
-/**
- * CardProduct component.
- */
 export const CardProduct = ({ product, className }: CardProductProps) => {
-  console.log(product)
+  if (product){
+    
+  }
   return (
     <div className={cardVariants({ className })}>
-        <div className="h-[70%] w-[150%] z-[0] rotate-[-20deg] bg-[#a8e6ff] absolute top-[-21%] left-[-29%]">
+      <div className="absolute top-[-21%] left-[-29%] w-[150%] h-[70%] bg-[#a8e6ff] rotate-[-20deg] z-0"></div>
+      
+      <div className="flex z-10 items-center gap-2 p-4">
+        <div className="flex flex-col">
+          <span className="text-lg font-bold text-blue-800 italic">Title here</span>
+          <span className="text-xs font-bold text-white">Lorem ipsum dolor sit, amet consectetur</span>
         </div>
-        <div className="flex z-[1] justify-stretch items-center gap-[9px] px-[16px] py-[16px]">
-            <div className="flex flex-col ">
-              <span className="text-[18px] font-bold text-blue-800 italic">
-                Title here
-              </span>
-              <span className="text-[12px] font-bold text-white">
-                Lorem ipsum dolor sit, amet consectetur
-              </span>
-            </div>
-            <span className="text-[18px] font-bold text-blue-800 bg-pink-200 px-[10px] py-[13px] rounded-[999px]">
-              $80
-            </span>
+        <span className="text-lg font-bold text-blue-800 bg-pink-200 px-3 py-2 rounded-full">$80</span>
+      </div>
+      
+      <div className="absolute top-[22%] right-[8%] max-[540px]:top-[27%] max-[540px]:right-[14%] w-48 h-48 max-[540px]:w-36
+       max-[540px]:h-36 max-[420px]:w-[220px] max-[420px]:h-[220px] max-[420px]:top-[20%] max-[420px]:right-[18%] bg-pink-200 rounded-full"></div>
+      
+      <div className="z-10 w-48 h-48 max-[540px]:w-36 max-[540px]:h-36 max-[420px]:w-[220px] max-[420px]:h-[220px]   rounded-full overflow-hidden">
+        <img src="https://giaycaosmartmen.com/wp-content/uploads/2020/12/cach-chup-giay-dep-5.jpg" alt="Product" />
+      </div>
+      
+      <div className="flex w-full justify-between items-center px-4 py-7 md:pt-10 gap-2 ">
+        <div className="flex gap-2">
+          {[...Array(5)].map((_, index) => (
+            <div key={index} className="w-2.5 h-2.5 bg-orange-400 rounded-full"></div>
+          ))}
         </div>
-        <div className="absolute w-[160px] h-[160px] rounded-[999px] bg-pink-200 top-[27%] right-[12%]"></div>
-        <div className="z-10 w-[160px] h-[160px] overflow-hidden rounded-[999px]">
-            <img src="https://giaycaosmartmen.com/wp-content/uploads/2020/12/cach-chup-giay-dep-5.jpg" alt="" />
-        </div>
-        <div className="flex w-full justify-between items-center px-[16px] pt-[28px]" >
-          <span className="flex gap-[8px] ">
-            {[...Array(5)].map((_, index) => (
-              <div key={index} className="w-[10px] h-[10px] bg-orange-400  rounded-full"></div>
-            ))}
-          </span>
-          <Button className="w-[100px] h-[20px] text-[12px]">
-            more detail»
-          </Button>
-        </div>
+        <Button className="w-20 h-5 text-xs">more detail»</Button>
+      </div>
     </div>
   );
 };

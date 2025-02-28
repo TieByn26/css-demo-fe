@@ -22,7 +22,7 @@ export const SearchDashboardRouter = () => {
   return (
     <div className="flex flex-col">
       <main className="flex items-center justify-center min-h-[calc(100vh-76px)] bg-[#e5e5e5] p-4">
-        <div className="flex flex-col sm:flex-row items-center justify-center p-6 sm:p-[65px] sm:px-[82px] bg-white rounded-[4px] w-full max-w-[800px]">
+        <div className="flex flex-col sm:flex-row items-center justify-center p-6 sm:p-[65px] sm:px-[82px] bg-white rounded-[4px] w-full max-w-[800px] gap-2">
           <Link
             to="/"
             className="flex flex-row items-center mb-4 sm:mb-0"
