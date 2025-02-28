@@ -39,7 +39,7 @@ export const CardProduct = ({ product, className }: CardProductProps) => {
             <div key={index} className="w-2.5 h-2.5 bg-orange-400 rounded-full"></div>
           ))}
         </div>
-        <Button className="w-20 h-5 text-xs">more detail»</Button>
+        <Button className="w-24 h-7 text-sm">more detail»</Button>
       </div>
     </div>
   );
