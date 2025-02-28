@@ -1,5 +1,4 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { LocalIcon } from "src/assets/local-icon";
 import { CardProduct } from "./card-product";
 
 const meta = {
