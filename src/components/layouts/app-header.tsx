@@ -62,7 +62,7 @@ export const AppHeader = () => {
         }`}
       >
         <Input className="flex-1" containerClass="flex-1 h-[50px]" placeholder={placeholder} ref={inputRef} />
-        <Button className="h-[50px] w-[120px]" onClick={search}>Search</Button>
+        <Button aria-label="search" className="h-[50px] w-[120px]" onClick={search}>Search</Button>
       </div>
     </header>
   );
