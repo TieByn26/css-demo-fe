@@ -30,7 +30,7 @@ export const CardProduct = ({ product, className }: CardProductProps) => {
        max-[540px]:h-36 max-[420px]:w-[220px] max-[420px]:h-[220px] max-[420px]:top-[20%] max-[420px]:right-[18%] bg-pink-200 rounded-full"></div>
       
       <div className="z-10 w-48 h-48 max-[540px]:w-36 max-[540px]:h-36 max-[420px]:w-[220px] max-[420px]:h-[220px]   rounded-full overflow-hidden">
-        <img className="w-full h-full" src="https://www.gstatic.com/webp/gallery/2.sm.webp" alt="Product" />
+        <img className="w-full h-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPuL6YjeDfHOtG1usL4GKMPGdLKJduB_ZXvQ&s" alt="Product" />
       </div>
       
       <div className="flex w-full justify-between items-center px-4 py-7 md:pt-10 gap-2 ">
