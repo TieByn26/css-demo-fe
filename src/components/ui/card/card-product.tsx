@@ -2,46 +2,55 @@ import { Button } from "../button";
 import { cva, VariantProps } from "class-variance-authority";
 
 const cardVariants = cva(
-  "relative overflow-hidden shadow flex flex-col justify-between items-center bg-white rounded-lg w-full h-[360px] max-[540px]:h-[320px] max-[421px]:h-[370px]"
+  "relative p-2 overflow-hidden min-w-[170px] max-w-[270px] min-h-[380px] max-h-[420px] rounded-2xl shadow flex flex-col items-center gap-[14px]"
 );
 
+/**
+ * CardProduct component props.
+ * @typedef {Object} CardProductProps
+ */
 export type CardProductProps = VariantProps<typeof cardVariants> & {
-  product?: number;
+  product?: unknown;
   className?: string;
 };
 
+/**
+ * CardProduct component.
+ */
 export const CardProduct = ({ product, className }: CardProductProps) => {
-  if (product){
-    
-  }
+  console.log(product);
   return (
     <div className={cardVariants({ className })}>
-      <div className="absolute top-[-21%] left-[-29%] w-[150%] h-[70%] bg-[#a8e6ff] rotate-[-20deg] z-0"></div>
-      <div className="flex w-full justify-between z-10 items-center gap-2 p-4">
-        <div className="flex flex-col">
-          <span className="max-[425]:leading-2 leading-4.5 text-lg font-bold text-blue-800 italic">Title here</span>
-          <span className="text-xs font-bold text-black
-                            max-[500px]: "
-          >Lorem ipsum dolor sit</span>
-        </div>
-        <span className="text-lg font-bold text-blue-800 bg-pink-200 px-3 py-2 rounded-full">$80</span>
-      </div>
-      
-      <div className="absolute top-[22%] right-[8%] max-[540px]:top-[27%] max-[540px]:right-[14%] w-48 h-48 max-[540px]:w-36
-       max-[540px]:h-36 max-[421px]:w-[220px] max-[421px]:h-[220px] max-[421px]:top-[20%] max-[421px]:right-[18%] bg-pink-200 rounded-full"></div>
-      
-      <div className="z-10 w-48 h-48 max-[540px]:w-36 max-[540px]:h-36 max-[421px]:w-[220px] max-[421px]:h-[220px] rounded-full overflow-hidden">
-        <img className="w-full h-full" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPuL6YjeDfHOtG1usL4GKMPGdLKJduB_ZXvQ&s" alt="Product" />
-      </div>
-      
-      <div className="flex w-full justify-between items-center px-4 py-7 md:pt-10 gap-2 ">
-        <div className="flex gap-1.5">
-          {[...Array(5)].map((_, index) => (
-            <div key={index} className="w-2.5 h-2.5 bg-orange-400 rounded-full"></div>
-          ))}
-        </div>
-        <Button className="w-24 h-7 text-sm max-[431px]:w-20 max-[431px]:h-7">detail»</Button>
-      </div>
+          <div className="w-[100%] h-[60%] shadow rounded-2xl flex items-center justify-center">
+            <figure className="w-[100%] h-[100%] rounded-2xl">
+              <img className="w-[100%] h-[100%] rounded-2xl cursor-pointer" src="https://media.secretsales.com/catalog/product/2/e/2e866c8d7fa747f5ae9b91ab6bac37a9.jpg" alt="" />
+            </figure>
+          </div>
+
+          <div className="w-[100%] flex-1 flex flex-col justify-between items-center gap-2">
+            <div className="w-[100%] py-2 flex flex-col justify-center items-start gap-2">
+              <h3 className="text-[16px] text-gray-800 max-h-[48px] line-clamp-2 font-bold cursor-pointer">
+                Lorna Shore Men To The Hellfire Hooded Zip in black - Size S
+              </h3>
+              <div className="flex flex-col justify-center items-start gap-2 sm:flex-row sm:justify-between sm:items-center w-full">
+                <div className="flex items-center justify-start gap-2">
+                  <p className="text-[12px] text-gray-800 font-bold">
+                    $44.25
+                  </p>
+                  <p className="text-[10px] text-gray-600 line-through">
+                    $44.25
+                  </p>
+                </div>
+                <span className="block min-w-0 max-w-[120px] h-[24px] py-1 px-3 bg-slate-300 rounded-2xl text-[12px] overflow-hidden text-ellipsis whitespace-nowrap cursor-pointer">
+                  Debenhams
+                </span>
+              </div>
+            </div>
+
+            <Button className="w-[100%] h-[38%] text-[14px] rounded-2xl bg-stone-300 text-stone-800 hover:bg-stone-600 hover:text-stone-50">
+              Detail »
+            </Button>
+          </div>
     </div>
   );
 };

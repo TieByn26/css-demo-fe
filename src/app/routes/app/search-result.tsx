@@ -13,14 +13,20 @@ export const SearchResultRouter = () => {
   useEffect(() => {
     console.log(selected);
     console.log(query);
-  }, [selected, query]);
+  }, [selected]);
 
   return (
     <>
-      <FilterBox selected={selected} setSelected={setSelected} />
-      <div className="grid gap-6 w-full max-[421px]:grid-cols-1 max-[640px]:grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <FilterBox
+        selected={selected}
+        setSelected={setSelected}
+      />
+      <div className="grid grid-cols-2 sm:grid-cols-[repeat(auto-fit,minmax(170px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] justify-center gap-2 sm:gap-5 w-full">
         {test.map((t, index) => (
-          <CardProduct key={index} product={t} />
+          <CardProduct
+            key={index}
+            product={t}
+          />
         ))}
       </div>
     </>
