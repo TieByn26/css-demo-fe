@@ -65,7 +65,6 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 className={cn(buttonVariants({ variant, size, className }))}
                 type={type}
                 ref={ref}
-                aria-label="search"
                 {...props}
             >
                 {startIcon && startIcon}
